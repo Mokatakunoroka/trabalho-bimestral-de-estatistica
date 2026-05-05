@@ -1,0 +1,87 @@
+/*Estilizando o body*/
+
+body
+{
+    min-height: 100vh;
+
+    background: linear-gradient(
+        40deg,
+        rgb(0, 38, 255) 50%,
+        rgb(0, 28, 184) 60%,
+        rgb(0, 18, 117) 70%,
+        rgb(0, 13, 83) 80%,
+        rgb(0, 0, 0) 90%
+    );
+}
+
+/*Centralizando o h1*/
+h1
+{
+    text-align: center;
+}
+
+/*tirando as bordas padrão da página*/
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilização do Main*/
+Main
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/*Estilizando a section*/
+section
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px currentColor;
+    
+    height: 220px;
+    width: 400px;
+}
+
+/*Estilizando botões*/
+button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    padding: 0px;
+    width: 35px;
+    height: 25px;
+}
+
+/*Animação do botão*/
+button:hover
+{
+    transform: scale(1.1);
+    transition: 200ms;
+    
+    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+}
+
+/*Estilizando footer*/
+footer
+{
+    text-align: center;
+}
