@@ -1,23 +1,16 @@
 /*Estilizando o body*/
-
 body
 {
     min-height: 100vh;
 
-    background: linear-gradient(
-        40deg,
-        rgb(0, 38, 255) 50%,
-        rgb(0, 28, 184) 60%,
-        rgb(0, 18, 117) 70%,
-        rgb(0, 13, 83) 80%,
-        rgb(0, 0, 0) 90%
-    );
+    background:rgb(9, 67, 133);
 }
 
 /*Centralizando o h1*/
 h1
 {
     text-align: center;
+    color: white;
 }
 
 /*tirando as bordas padrão da página*/
@@ -42,46 +35,89 @@ Main
 section
 {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 
-    border: 2px solid black;
+    padding: 20px;
+
+    border: 1px solid currentColor;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px currentColor;
     
-    height: 220px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background: rgb(11, 66, 148);
+
+    height: 120px;
     width: 400px;
+
+    transition: 200ms;
 }
 
-/*Estilizando botões*/
-button
+section:hover
+{
+    transform: scale(1.1);
+    transition: 200ms;
+    box-shadow: 0px 0px 10px rgb(0, 183, 255);
+}
+
+.botoes
 {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 10px;
+    gap: 30px;
+}
 
-    border: 1px solid black;
-    border-radius: 5px;
+/*Estilizando botões*/
+a
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 
-    padding: 0px;
-    width: 35px;
-    height: 25px;
+    cursor: pointer;
+
+    border: 1px solid rgb(157, 211, 255);
+    border-radius: 15px;
+
+    width: 55px;
+    height: 45px;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    text-decoration: none;
+    
+    background: rgb(12, 86, 196);
+    color: white;
+
+    transition: 200ms;
 }
 
 /*Animação do botão*/
-button:hover
+a:hover
 {
     transform: scale(1.1);
     transition: 200ms;
     
-    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+    box-shadow: 0px 0px 5px rgb(24, 114, 231);
 }
 
 /*Estilizando footer*/
 footer
 {
-    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+hr
+{
+    color: gray
 }
