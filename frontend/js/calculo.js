@@ -9,6 +9,7 @@ for (let i = 0; i < 7; i++)
     `
     <input
     required
+    class='inputs'
     type="text"
     id="input${i}"
     placeholder="Digite o número...">

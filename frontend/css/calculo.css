@@ -1,0 +1,50 @@
+/*essa parte é para estilizar o fundo da pagina e a escrita*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(9, 67, 133);
+  
+  color: white;
+}
+header{
+  text-align:center;
+
+}
+main{
+  display: flex;
+  flex-flow: row wrap;  
+  align-items: center;
+  justify-content: center;
+  
+  min-height: 100vh;
+}
+
+
+
+.resultados{
+  padding-right: 30px;
+ border: 1px solid rgb(255, 255, 255);   
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  min-height: 360px;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center; 
+  align-items: center;
+  background-color: rgb(11, 66, 148)
+}
+
+#info-calculo{
+   border: 1px solid rgb(255, 255, 255);   
+  border-radius: 5px;
+  margin: 20px;
+  padding: 20px;
+  min-height: 360px;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center; 
+  align-items: center;
+  background-color: rgb(11, 66, 148)
+}
+

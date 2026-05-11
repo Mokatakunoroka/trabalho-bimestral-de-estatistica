@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calculo.css">
     <title>Trabalho bimestral de estatística</title>
 </head>
 <body>
-
+        
     <!--Cabeçário da página-->
     <header>
         <h1>
@@ -25,30 +26,33 @@
         </section>
 
         <!--Sessão onde mostrará os resultados para o usuário-->
-        <section>
+        <section class="resultados">
             <h2>
                 Resultados
             </h2>
+            
+            <div>
+                <p id="media">
+                    Media:
+                </p>
 
-            <p id="media">
-                Media:
-            </p>
+                <p id="mediana">
+                    Mediana:
+                </p>
 
-            <p id="mediana">
-                Mediana:
-            </p>
+                <p id="variancia">
+                    Calculo da variância:
+                </p>
 
-            <p id="variancia">
-                Calculo da variância:
-            </p>
+                <p id="desvio-padrao">
+                    Desvio padrão:
+                </p>
 
-            <p id="desvio-padrao">
-                Desvio padrão:
-            </p>
-
-            <p id="coeficiente-variancia">
-                Coeficiente de variância:
-            </p>
+                <p id="coeficiente-variancia">
+                    Coeficiente de variância:
+                </p>
+            </div>
+            
         </section>
     </main>
 
@@ -59,5 +63,5 @@
         João Vitor Nascimento - RA: 2026108385
     </footer>
     <script type="module" src="../js/calculo.js"></script>
-</body>
+    </body>
 </html>
