@@ -1,20 +1,25 @@
-const opcaoEscolhida = Number(JSON.parse(localStorage.getItem("botaoEscolhido")))
-
 function output()
 {
     let quaisExistem = [];
-    for (let i = 0; i < 7; i++)
+    const inputs = document.querySelectorAll("#card-info input");
+
+    inputs.forEach(input =>
     {
-        const input = document.getElementById(`input${i}`) || null;
-        if (input == "" || input == null)
+        const valor = input.value.trim();
+
+        if (valor === "")
         {
-            continue;
+            return;
         }
-        else
+
+        const numero = Number(valor);
+
+        if (!Number.isNaN(numero))
         {
-            quaisExistem.push(Number(input.value));
+            quaisExistem.push(numero);
         }
-    }
+    })
+
     return quaisExistem;
 
 }
@@ -22,17 +27,29 @@ function output()
 export function media()
 {
     const dados = output();
+
+    if (dados.length === 0)
+    {
+        return 0;
+    }
+
     let soma = 0;
     dados.forEach(elementos => 
     {
         soma += elementos;
     })
-    return soma / opcaoEscolhida;
+    return duasCasas(soma / dados.length);
 }
 
 export function mediana()
 {
     let dados = output();
+
+    if (dados.length === 0)
+    {
+        return 0;
+    }
+
     dados.sort((a, b) => a - b) //Isso ordena dos menores pro maiores
 
     if (dados.length % 2 != 0)
@@ -40,41 +57,52 @@ export function mediana()
         return dados[((dados.length + 1) / 2) - 1];
     }
 
-    return (dados[(dados.length / 2) - 1] + dados[((dados.length + 1) / 2) - 1]) / 2;
+    const meio = dados.length / 2;
+    return duasCasas((dados[meio - 1] + dados[meio]) / 2)
 }
 
 export function varianca()
 {
     const dados = output();
+
+    if (dados.length < 2)
+    {
+        return 0;
+    }
+
     let soma = 0;
+    const mediaDados = media();
 
     dados.forEach(elementos => 
     {
-        soma += (elementos - media()) ** 2;
+        soma += (elementos - mediaDados) ** 2;
     })
-    return (soma / (opcaoEscolhida - 1));
+
+    return duasCasas(soma / (dados.length - 1));
 
 }
 export function desvioPadrao()
 {
-    const primeiro = ((Math.sqrt(varianca())).toString()).split(".")[0];
-    const segundo = ((Math.sqrt(varianca())).toString()).split(".")[1][0];
-    const resultado = Number((primeiro.toString() + "." + segundo.toString()));
-    return resultado;
+    return duasCasas(Math.sqrt(varianca()));
 }
 
 export function coeficienteVarianca()
 {
-    const homo_hetero = (desvioPadrao() / media()) * 100;
-    
-    const primeiro = ((homo_hetero).toString()).split(".")[0];
-    const segundo = ((homo_hetero).toString()).split(".")[1][0];
+    if (media() === 0)
+    {
+        return [0, "homogêneo"]
+    }
 
-    const resultado = Number((primeiro.toString() + "." + segundo.toString()));
+    const homo_hetero = (desvioPadrao() / media()) * 100;
 
     if (homo_hetero > 30)
     {
-        return [resultado, "heterogêneo"]
+        return [duasCasas(homo_hetero), "heterogêneo"]
     }
-    return [resultado, "homogêneo"]
+    return [duasCasas(homo_hetero), "homogêneo"]
+}
+
+function duasCasas(numero)
+{
+    return Number(numero.toFixed(2));
 }
