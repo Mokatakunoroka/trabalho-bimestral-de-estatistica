@@ -71,7 +71,7 @@ section:hover
 }
 
 /*Estilizando botões*/
-a
+button
 {
     display: flex;
     flex-flow: row wrap;
@@ -97,7 +97,7 @@ a
 }
 
 /*Animação do botão*/
-a:hover
+button:hover
 {
     transform: scale(1.1);
     transition: 200ms;

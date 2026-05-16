@@ -1,18 +1,29 @@
-//Esssa constante recebe o elemento <section> dentro do main, que tem o id "info-calculo"
-const sessao_Main = document.getElementById("info-calculo");
-//Esse for, faz um loop 7 vezes
-for (let i = 0; i < 7; i++)
-{
-    //Uso a função insertAdjacentHTML para adicionar no fim do elemento os inputs
-    sessao_Main.insertAdjacentHTML("beforeend", 
-    `
-    <input
-    required
-    class='inputs'
-    type="text"
-    id="input${i}"
-    placeholder="Digite o número...">
+const botao4 = document.getElementById("btn4");
+const botao5 = document.getElementById("btn5");
+const botao6 = document.getElementById("btn6");
+const botao7 = document.getElementById("btn7");
 
-    <br>
-    `);
-}
+botao4.addEventListener("click", () => 
+{
+    localStorage.setItem("botaoEscolhido", 4)
+    return window.location.href = "calculo.html";
+})
+
+botao5.addEventListener("click", () => 
+{
+    localStorage.setItem("botaoEscolhido", 5)
+    return window.location.href = "calculo.html";
+})
+
+botao6.addEventListener("click", () => 
+{
+    localStorage.setItem("botaoEscolhido", 6)
+    return window.location.href = "calculo.html";
+})
+
+botao7.addEventListener("click", () => 
+{
+    localStorage.setItem("botaoEscolhido", 7)
+    return window.location.href = "calculo.html";
+})
+
