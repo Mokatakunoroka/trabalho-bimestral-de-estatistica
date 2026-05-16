@@ -19,8 +19,6 @@ main{
   min-height: 100vh;
 }
 
-
-
 .resultados{
   padding-right: 30px;
  border: 1px solid rgb(255, 255, 255);   
@@ -28,6 +26,7 @@ main{
   margin: 20px;
   padding: 20px;
   min-height: 360px;
+  min-width: 300px;
   display: flex;
   flex-flow:column wrap;
   justify-content: center; 
@@ -36,11 +35,12 @@ main{
 }
 
 #info-calculo{
-   border: 1px solid rgb(255, 255, 255);   
+  border: 1px solid rgb(255, 255, 255);   
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
   min-height: 360px;
+  min-width: 300px;
   display: flex;
   flex-flow:column wrap;
   justify-content: center; 
@@ -48,3 +48,45 @@ main{
   background-color: rgb(11, 66, 148)
 }
 
+input
+{
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+}
+
+input:focus
+{
+  outline: none;
+}
+
+#card-info
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+button
+{
+  border: 1px solid white;
+  border-radius: 4px;
+
+  transition: 200ms;
+}
+button:hover
+{
+  transform: scale(1.1);
+  transition: 200ms;
+}
+
+footer
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}

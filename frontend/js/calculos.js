@@ -1,9 +1,15 @@
 const botao = Number(JSON.parse(localStorage.getItem("botaoEscolhido")))
-const formulario = document.getElementById("Formulario");
+const formulario = document.getElementById("card-info");
 
 for (let i = 0; i < botao; i++)
 {
-    formulario.insertAdjacentElement("beforeend", document.createElement("input", id=`input${i}`));
+    let inputs = document.createElement("input");
+
+    inputs.id = `input${i}`;
+    inputs.placeholder = "Insira um valor...";
+    inputs.required = true;
+
+    formulario.insertAdjacentElement("beforeend", inputs);
     formulario.insertAdjacentElement("beforeend", document.createElement("br"));
 }
 
