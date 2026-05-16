@@ -1,123 +1,139 @@
-/*Estilizando o body*/
-body
-{
-    min-height: 100vh;
-
-    background:rgb(9, 67, 133);
-}
-
-/*Centralizando o h1*/
-h1
-{
-    text-align: center;
-    color: white;
-}
-
-/*tirando as bordas padrão da página*/
+/* RESET */
 html, body
 {
     margin: 0;
     padding: 0;
 }
 
-/*Estilização do Main*/
-Main
+/* BODY */
+body
+{
+    min-height: 100vh;
+
+    background: #0a4b91;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* TÍTULO */
+h1
+{
+    text-align: center;
+
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+    font-size: 2.3rem;
+    font-weight: 600;
+}
+
+/* MAIN */
+main
 {
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 
-
-/*Estilizando a section*/
-section
-{
-    display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
-
-    border: 1px solid currentColor;
-    border-radius: 10px;
-    
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    background: rgb(11, 66, 148);
-
-    height: 120px;
-    width: 400px;
-
-    transition: 200ms;
-}
-
-section:hover
-{
-    transform: scale(1.1);
-    transition: 200ms;
-    box-shadow: 0px 0px 10px rgb(0, 183, 255);
-}
-
-.botoes
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 80vh;
 
     gap: 30px;
 }
 
-/*Estilizando botões*/
-button
+/* SECTION */
+section
 {
     display: flex;
     flex-flow: row wrap;
+
     justify-content: center;
     align-items: center;
 
+    gap: 25px;
+
+    width: 420px;
+    min-height: 140px;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    background: rgb(12, 73, 145);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+
+    transition: 180ms;
+}
+
+section:hover
+{
+    transform: translateY(-3px);
+
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.25);
+}
+
+/* BOTÕES */
+.botoes
+{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+button
+{
     cursor: pointer;
 
-    border: 1px solid rgb(157, 211, 255);
-    border-radius: 15px;
+    width: 60px;
+    height: 48px;
 
-    width: 55px;
-    height: 45px;
+    border: none;
+    border-radius: 10px;
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: larger;
-    text-decoration: none;
-    
-    background: rgb(12, 86, 196);
+    background: rgb(18, 98, 194);
+
     color: white;
 
-    transition: 200ms;
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 180ms;
 }
 
-/*Animação do botão*/
 button:hover
 {
-    transform: scale(1.1);
-    transition: 200ms;
-    
-    box-shadow: 0px 0px 5px rgb(24, 114, 231);
+    background: rgb(25, 112, 219);
+
+    transform: scale(1.05);
 }
 
-/*Estilizando footer*/
+/* FOOTER */
 footer
 {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
+    margin-top: 30px;
+    padding-bottom: 20px;
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 0.95rem;
 }
 
+/* LINHA */
 hr
 {
-    color: gray
+    width: 80%;
+
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
 }

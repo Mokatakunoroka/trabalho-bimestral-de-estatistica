@@ -15,7 +15,6 @@ for (let i = 0; i < botao; i++)
 
 let botaoForm = document.createElement("button");
 
-botaoForm.type = "submit";
 botaoForm.id = "botao-form";
 botaoForm.textContent = "Calcular";
 
